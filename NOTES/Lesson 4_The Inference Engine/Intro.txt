@@ -1,0 +1,8 @@
+This lesson Covers:
+
+a)Basics of the Inference Engine
+b)Supported Devices
+c)Feeding an Intermediate Representation to the Inference Engine
+d)Making Inference Requests
+e)Handling Results from the Inference Engine
+f)Integrating the Inference Model into an App
