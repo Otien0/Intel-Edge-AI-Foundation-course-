@@ -1,0 +1,9 @@
+This lesson covers:
+
+a)Basics of OpenCV
+b)Handling Input Streams in OpenCV
+c)Processing Model Outputs for Additional Useful Information
+d)The Basics of MQTT and their use with IoT devices
+e)Sending statistics and video streams to a server
+f)Performance basics
+g)And finish up by thinking about additional model use cases, as well as end user needs
