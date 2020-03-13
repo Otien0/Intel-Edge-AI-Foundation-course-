@@ -1,0 +1,66 @@
+1. 
+Intel® Distribution of OpenVINO™ Toolkit (Includes the Intel® Deep Learning Deployment Toolkit)
+Link to Download: https://software.intel.com/en-us/openvino-toolkit/choose-download?
+
+Link to Learn Further: https://devmesh.intel.com/
+
+The structure of the course:
+Pre-Trained Models
+The Model Optimizer
+The Inference Engine
+More edge topics (MQTT, servers, etc.)
+
+2. The OpenVINO™ Toolkit
+LINK: https://software.intel.com/en-us/openvino-toolkit
+The OpenVINO™ Toolkit’s name comes from “Open Visual Inferencing and Neural Network Optimization”. It is largely focused around optimizing neural network inference, and is open source.
+
+It is developed by Intel®, and helps support fast inference across Intel® CPUs, GPUs, FPGAs and Neural Compute Stick with a common API. OpenVINO™ can take models built with multiple different frameworks, like TensorFlow or Caffe, and use its Model Optimizer to optimize for inference. This optimized model can then be used with the Inference Engine, which helps speed inference on the related hardware. It also has a wide variety of Pre-Trained Models already put through Model Optimizer.
+
+By optimizing for model speed and size, OpenVINO™ enables running at the edge. This does not mean an increase in inference accuracy - this needs to be done in training beforehand. The smaller, quicker models OpenVINO™ generates, along with the hardware optimizations it provides, are great for lower resource applications. For example, an IoT device does not have the benefit of multiple GPUs and unlimited memory space to run its apps.
+
+3. Pre-Trained Models in OpenVINO™
+LINK:https://software.intel.com/en-us/openvino-toolkit/documentation/pretrained-models
+In general, pre-trained models refer to models where training has already occurred, and often have high, or even cutting-edge accuracy. Using pre-trained models avoids the need for large-scale data collection and long, costly training. Given knowledge of how to preprocess the inputs and handle the outputs of the network, you can plug these directly into your own app.
+
+In OpenVINO™, Pre-Trained Models refer specifically to the Model Zoo, in which the Free Model Set contains pre-trained models already converted using the Model Optimizer. These models can be used directly with the Inference Engine.
+
+4.  Types of Computer Vision Models:
+LINK: https://medium.com/analytics-vidhya/image-classification-vs-object-detection-vs-image-segmentation-f36db85fe81
+
+ A)Classification determines a given “class” that an image, or an object in an image, belongs to, from a simple yes/no to thousands of classes. These usually have some sort of “probability” by class, so that the highest probability is the determined class, but you can also see the top 5 predictions as well.
+
+ B)Detection gets into determining that objects appear at different places in an image, and oftentimes draws bounding boxes around the detected objects. It also usually has some form of classification that determines the class of an object in a given bounding box. The bounding boxes have a confidence threshold so you can throw out low-confidence detections.
+
+ C)Segmentation classifies sections of an image by classifying each and every pixel. These networks are often post-processed in some way to avoid phantom classes here and there. Within segmentation are the subsets of semantic segmentation and instance segmentation - the first wherein all instances of a class are considered as one, while the second actually consider separates instances of a class as separate objects.
+ 
+5.  Examples of Computer Vission Models:
+ 
+ A) SSD is an object detection network that combined classification with object detection through the use of default bounding boxes at different network levels.  LINK: https://arxiv.org/abs/1512.02325
+ 
+ B) ResNet utilized residual layers to “skip” over sections of layers, helping to avoid the vanishing gradient problem with very deep neural networks.  LINK: https://arxiv.org/abs/1512.03385
+ 
+ C) MobileNet utilized layers like 1x1 convolutions to help cut down on computational complexity and network size, leading to fast inference without substantial decrease in accuracy. LINK: https://arxiv.org/abs/1704.04861
+ 
+ 
+ OTHER LINKS:
+ D)YOLO: You Only Look Once: Unified, Real-Time Object Detection
+    LINK: https://arxiv.org/abs/1506.02640
+    
+ E) Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+      LINK: https://arxiv.org/abs/1506.01497
+  
+  F) Inception: https://arxiv.org/pdf/1409.4842.pdf
+  
+6.  Handling Network Outputs:
+ A) Classification networks typically output an array with the softmax probabilities by class; the argmax of those probabilities can be matched up to an array by class for the prediction.
+
+ B) Bounding boxes typically come out with multiple bounding box detections per image, which each box first having a class and confidence. Low confidence detections can be ignored. From there, there are also an additional four values, two of which are an X, Y pair, while the other may be the opposite corner pair of the bounding box, or otherwise a height and width.
+
+7. Available Pre-Trained Models in OpenVINO™:
+Most of the Pre-Trained Models supplied by OpenVINO™ fall into either face detection, human detection, or vehicle-related detection. There is also a model around detecting text, and more!
+
+Models in the Public Model Set must still be run through the Model Optimizer, but have their original models available for further training and fine-tuning. The Free Model Set are already converted to Intermediate Representation format, and do not have the original model available. These can be easily obtained with the Model Downloader tool provided in the files installed with OpenVINO™.
+
+The SSD and MobileNet architectures we discussed previously are often the main part of the architecture used for many of these models.
+LINK: https://software.intel.com/en-us/openvino-toolkit/documentation/pretrained-models
+ C) Semantic labels give the class for each pixel. Sometimes, these are flattened in the output, or a different size than the original image, and need to be reshaped or resized to map directly back to the input.
