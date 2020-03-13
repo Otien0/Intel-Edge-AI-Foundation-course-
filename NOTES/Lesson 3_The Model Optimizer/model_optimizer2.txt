@@ -1,0 +1,29 @@
+ E. CUTTING PARTS OF A MODEL:
+  Cutting a model is mostly applicable for TensorFlow models. As we saw earlier in converting these models, they sometimes have some extra complexities. Some common reasons for cutting are:
+
+The model has pre- or post-processing parts that don’t translate to existing Inference Engine layers.
+The model has a training part that is convenient to be kept in the model, but is not used during inference.
+The model is too complex with many unsupported operations, so the complete model cannot be converted in one shot.
+The model is one of the supported SSD models. In this case, you need to cut a post-processing part off.
+There could be a problem with model conversion in the Model Optimizer or with inference in the Inference Engine. To localize the issue, cutting the model could help to find the problem
+There’s two main command line arguments to use for cutting a model with the Model Optimizer, named intuitively as --input and --output, where they are used to feed in the layer names that should be either the new entry or exit points of the model.
+    LINK: https://docs.openvinotoolkit.org/2019_R3/_docs_MO_DG_prepare_model_convert_model_Cutting_Model.html
+    
+    G. SUPPORTED LAYERS:
+What happens when a layer isn’t supported by the Model Optimizer? One potential solution is the use of custom layers, which we’ll go into more shortly. Another solution is actually running the given unsupported layer in its original framework. For example, you could potentially use TensorFlow to load and process the inputs and outputs for a specific layer you built in that framework, if it isn’t supported with the Model Optimizer. Lastly, there are also unsupported layers for certain hardware, that you may run into when working with the Inference Engine. In this case, there are sometimes extensions available that can add support
+    LINK: https://docs.openvinotoolkit.org/2019_R3/_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html
+     
+    G. CUSTOM LAYERS:
+  Custom layers are a necessary and important to have feature of the OpenVINO™ Toolkit, although you shouldn’t have to use it very often, if at all, due to all of the supported layers. However, it’s useful to know a little about its existence and how to use it if the need arises.
+
+The list of supported layers from earlier very directly relates to whether a given layer is a custom layer. Any layer not in that list is automatically classified as a custom layer by the Model Optimizer.
+
+To actually add custom layers, there are a few differences depending on the original model framework. In both TensorFlow and Caffe, the first option is to register the custom layers as extensions to the Model Optimizer.
+
+For Caffe, the second option is to register the layers as Custom, then use Caffe to calculate the output shape of the layer. You’ll need Caffe on your system to do this option.
+
+For TensorFlow, its second option is to actually replace the unsupported subgraph with a different subgraph. The final TensorFlow option is to actually offload the computation of the subgraph back to TensorFlow during inference.
+ LINKS:https://docs.openvinotoolkit.org/2019_R3/_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html
+       https://docs.openvinotoolkit.org/2019_R3/_docs_MO_DG_prepare_model_customize_model_optimizer_Customize_Model_Optimizer.html
+       
+   exercise link: https://github.com/david-drew/OpenVINO-Custom-Layers
