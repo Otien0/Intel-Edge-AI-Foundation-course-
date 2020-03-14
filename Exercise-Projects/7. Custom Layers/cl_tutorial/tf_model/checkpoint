@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/workspace/cl_tutorial/tf_model/model.ckpt"
+all_model_checkpoint_paths: "/home/workspace/cl_tutorial/tf_model/model.ckpt"

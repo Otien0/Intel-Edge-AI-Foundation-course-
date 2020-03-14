@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="ModCosh/Convolution_2/add" out_port_id="0"/>
+		<IR id="8" name="ModCosh/Convolution_2/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/cosh/Cosh" out_port_id="0"/>
+		<IR id="1" name="ModCosh/cosh/Cosh" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Convolution/add" out_port_id="0"/>
+		<IR id="2" name="ModCosh/Convolution/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation/Relu6" out_port_id="0"/>
+		<IR id="3" name="ModCosh/Activation/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Convolution_1/add" out_port_id="0"/>
+		<IR id="4" name="ModCosh/Convolution_1/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Pooling/MaxPool" out_port_id="0"/>
+		<IR id="6" name="ModCosh/Pooling/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/cosh_1/Cosh" out_port_id="0"/>
+		<IR id="7" name="ModCosh/cosh_1/Cosh" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_2/Relu6" out_port_id="0"/>
+		<IR id="9" name="ModCosh/Activation_2/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Convolution_3/add" out_port_id="0"/>
+		<IR id="10" name="ModCosh/Convolution_3/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_3/Relu6" out_port_id="0"/>
+		<IR id="11" name="ModCosh/Activation_3/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Pooling_1/MaxPool" out_port_id="0"/>
+		<IR id="12" name="ModCosh/Pooling_1/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/cosh_2/Cosh" out_port_id="0"/>
+		<IR id="13" name="ModCosh/cosh_2/Cosh" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Convolution_4/add" out_port_id="0"/>
+		<IR id="14" name="ModCosh/Convolution_4/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_4/Relu6" out_port_id="0"/>
+		<IR id="15" name="ModCosh/Activation_4/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Convolution_5/add" out_port_id="0"/>
+		<IR id="16" name="ModCosh/Convolution_5/Conv2D" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_5/Relu6" out_port_id="0"/>
+		<IR id="17" name="ModCosh/Activation_5/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Flatten/Reshape/shape" out_port_id="0"/>
+		<IR id="20" name="ModCosh/Flatten/Reshape/shape/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Flatten/Reshape" out_port_id="0"/>
+		<IR id="21" name="ModCosh/Flatten/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Dense/add" out_port_id="0"/>
+		<IR id="22" name="ModCosh/Dense/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Dense_1/add" out_port_id="0"/>
+		<IR id="24" name="ModCosh/Dense_1/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_7/Sigmoid" out_port_id="0"/>
+		<IR id="25" name="ModCosh/Activation_7/Sigmoid" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Dense_2/add" out_port_id="0"/>
+		<IR id="26" name="ModCosh/Dense_2/MatMul" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_8/softmax_output" out_port_id="0"/>
+		<IR id="27" name="ModCosh/Activation_8/softmax_output" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Pooling_2/MaxPool" out_port_id="0"/>
+		<IR id="19" name="ModCosh/Pooling_2/MaxPool/Transpose" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_6/Sigmoid" out_port_id="0"/>
+		<IR id="23" name="ModCosh/Activation_6/Sigmoid" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Input/Inputs" out_port_id="0"/>
+		<IR id="0" name="Input/Inputs" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="ModCosh/Activation_1/Relu6" out_port_id="0"/>
+		<IR id="5" name="ModCosh/Activation_1/Relu6" out_port_id="1"/>
+	</map>
+</mapping>
