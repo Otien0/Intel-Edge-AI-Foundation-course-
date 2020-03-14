@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="data_0" out_port_id="data_0"/>
+		<IR id="0" name="data_0" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="conv1_1" out_port_id="conv1_1"/>
+		<IR id="1" name="conv1_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv1_2" out_port_id="conv1_2"/>
+		<IR id="2" name="conv1_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="norm1_1" out_port_id="norm1_1"/>
+		<IR id="3" name="norm1_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2_1" out_port_id="conv2_1"/>
+		<IR id="5" name="conv2_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2_2" out_port_id="conv2_2"/>
+		<IR id="6" name="conv2_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="norm2_1" out_port_id="norm2_1"/>
+		<IR id="7" name="norm2_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="pool2_1" out_port_id="pool2_1"/>
+		<IR id="8" name="pool2_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv3_1" out_port_id="conv3_1"/>
+		<IR id="9" name="conv3_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv3_2" out_port_id="conv3_2"/>
+		<IR id="10" name="conv3_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv4_1" out_port_id="conv4_1"/>
+		<IR id="11" name="conv4_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv4_2" out_port_id="conv4_2"/>
+		<IR id="12" name="conv4_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv5_1" out_port_id="conv5_1"/>
+		<IR id="13" name="conv5_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv5_2" out_port_id="conv5_2"/>
+		<IR id="14" name="conv5_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="pool5_1" out_port_id="pool5_1"/>
+		<IR id="15" name="pool5_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="OC2_DUMMY_1" out_port_id="OC2_DUMMY_1"/>
+		<IR id="16" name="OC2_DUMMY_1/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="OC2_DUMMY_0" out_port_id="OC2_DUMMY_0"/>
+		<IR id="17" name="OC2_DUMMY_0" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="fc6_1" out_port_id="fc6_1"/>
+		<IR id="18" name="fc6_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="fc7_1" out_port_id="fc7_1"/>
+		<IR id="20" name="fc7_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="fc7_3" out_port_id="fc7_3"/>
+		<IR id="21" name="fc7_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="fc7_2" out_port_id="fc7_2"/>
+		<IR id="21" name="fc7_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="fc8_1" out_port_id="fc8_1"/>
+		<IR id="22" name="fc8_1" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="prob_1" out_port_id="0"/>
+		<IR id="23" name="prob_1" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="fc6_3" out_port_id="fc6_3"/>
+		<IR id="19" name="fc6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="fc6_2" out_port_id="fc6_2"/>
+		<IR id="19" name="fc6_2" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="pool1_1" out_port_id="pool1_1"/>
+		<IR id="4" name="pool1_1" out_port_id="1"/>
+	</map>
+</mapping>
